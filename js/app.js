@@ -1,43 +1,13 @@
 'use strict'
 
-let Time = 10;
 let Score = 0;
 let userName;
 
-window.onload = (function() {
-
-       
-
-function beforeStart(){
-                debugger;
-        let Begun = confirm("by clicking OK the game will start");
-        if (Begun == true) {
-                alert("be quick ! you have 10 second only");
-                hidInfo();
-            sleep(1000);
-            let isReady = confirm("Click ok if you are ready and cancel if you need 10 seconds more ");
-    
-            while (!isReady) {
-                sleep(10000);
-                Time +=10;
-                isReady = confirm("Click ok if you are ready and cancel if you need 10 seconds more ");
-            }
-
-            hidInfo();
-        }
-        
-        userName = ("what is your name?");
-        debugger;
+function Game(){
+  
+     userName = prompt("what is your name?");
         
         alert("alright "+ userName +",now you can write yes,y,no,n");
-        
-
-}
-beforeStart();
-
-function Game(){
-   
-  
     let myName = prompt("Is my name Manal?");
     switch (myName.toUpperCase()) {
 
@@ -136,50 +106,53 @@ function Game(){
     Result(Score) ;
 }
 
-Game();
+
 function Result(num){
     debugger;
-    hidInfo();
+    
 if (num<3) {
-    alert("it's ok "+userName+ " you can try again by reloading the page .. your score is" + num + " out of 5 and you spent" + Time + " seconds  in reading");
-    document.getElementById("placeHolder").innerHTML = "it's ok you can try again by reloading the page .. your score is" + num + " out of 5 and you spent" + Time + " seconds in in reading";
+    alert("it's ok "+userName+ " you can try again by reloading the page .. your score is" + num + " out of 5");
+    document.getElementById("placeHolder").innerHTML = "Hello "+ userName+ " it's ok you can try again by reloading the page .. your score is" + num + " out of 5 ";
 } else if ( num>3 && num<5 ) {
-    alert("you did well "+userName+ " you got" + num + " out of 5 and you spent" + Time + " seconds in in reading") ;
-    document.getElementById("placeHolder").innerHTML = "you did well you got" + num + " out of 5 and you spent" + Time + " seconds  in reading"
+    alert("you did well "+userName+ " you got" + num + " out of 5") ;
+    document.getElementById("placeHolder").innerHTML = "Hello "+ userName+ " you did well you got" + num + " out of 5 "
 }
 
 else {
-    alert("you nailed it "+userName+ " :D you got " + num + "out of 5 and you spent" + Time + " seconds in in reading");
-    document.getElementById("placeHolder").innerHTML ="you nailed it :D you got " + num + "out of 5 and you spent" + Time + " seconds  in reading"
+    alert("you nailed it "+userName+ " :D you got " + num + "out of 5");
+    document.getElementById("placeHolder").innerHTML ="Hello "+ userName+ " you nailed it :D you got " + num + " out of 5"
 }
 
 
 
 }
 
-function sleep(milliseconds) {
+   function hidInfo(){
+    debugger;
+    if ( document.getElementById("Game").style.display == "block") {
 
-  
-    const date = Date.now();
-    let currentDate = null;
-    do {
-       currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-  }
+        document.getElementById("Game").style.display = "none";
+    }
+    else{
 
-function hidInfo(){
-        debugger;
-        if ( document.getElementById("Game").style.display == "block") {
-
-            document.getElementById("Game").style.display = "none";
-        }
-        else{
-
-                document.getElementById("Game").style.display = "block";
-        }
-        
+            document.getElementById("Game").style.display = "block";
+    }
+    
 }
 
-});
+function moreTime() {
+    debugger;
+    document.getElementById("moreTime").style.display = "none";
+    hidInfo();
+        document.getElementById("warning").style.display = "none";
+     }
 
+
+  setTimeout(function(){
+
+document.getElementById('start').removeAttribute("disabled");
+document.getElementById("Game").style.display = "none";
+document.getElementById("moreTime").style.display = "inline";
+
+}, 10000);
 

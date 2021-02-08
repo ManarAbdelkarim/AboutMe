@@ -16,9 +16,12 @@ display: block;
 
 }
 
-
+#place{
+    background-color: rgb(171, 247, 171);
+}
 
 h1{
+    
     line-height: 1.6;
     text-shadow: 2px 2px red;
 }
@@ -29,7 +32,6 @@ h1{
     margin-right: auto;
     max-width: 80%;
    border: slategray solid 2px;
-   display: none;
 
 }
 #Game h2{
@@ -52,10 +54,24 @@ h1{
 
     background-color:tomato;
     font-size: larger;
+    border-radius: 20px;
+
 }
 
 
 #span{
 
     background-color: whitesmoke;
+}
+
+#moreTime {
+    display: none;
+}
+
+button {
+    background-color: aquamarine;
+    width: 10%;
+    border-radius: 10px;
+    align-self:center;
+    margin-top: 5px;
 }

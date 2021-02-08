@@ -15,15 +15,14 @@
     <main>
 
         <P id="introduce">
-            My name is Manar Abdelkarim ,I am 25 years old I born In Riyadh - Saudi Arabia and currently live in Amman- jordan. </br>
-        II studied CIS at Princess Noura University and graduated in 2019.
+            My name is Manar Abdelkarim ,I Made this game for level 201 lab 2 
         </p>
-
+        
         <div id="Game" >
 
            <h2>Here the game start</h2>
            
-            <strong>Please read the paragraph carefully and quickly, the game will start after 10 seconds (: ! </strong>
+            <strong id="warning">Please read the paragraph carefully and quickly, the game will start after 10 seconds (: ! </strong>
             <br>
             <div id="span">
             <P>My name is Manar Abdelkarim ,I am 25 years old I born In Riyadh-Saudi Arabia  and currently live in Amman- jordan. </br>
@@ -32,10 +31,16 @@
             </p>
         </div>
             </div>
-                <div>
-                        <p id="placeHolder"></p>
+               
 
-                </div>  
+                <button id="start" onclick="Game()" disabled>Start</button>
+                <br>
+                <button id="moreTime" onclick="moreTime()">more time</button>
+                <br>
+                <div id="place">
+                    <p id="placeHolder"></p>
+
+            </div>  
     </main>
     <footer> &copy; 2021 Manar Abdelkarim</footer>
     <script src="./js/app.js"></script>
