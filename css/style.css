@@ -1,9 +1,13 @@
 body{
-max-width: 90%;
+max-width: 99%;
+
+
 background-color: #f0f7ff;
 text-align: center;
 display: block;
+font-family: Arial, Helvetica, sans-serif;
 }
+
 
 #introduce{
 
@@ -75,3 +79,43 @@ button {
     align-self:center;
     margin-top: 5px;
 }
+
+section  {
+    /* 770px */
+        
+    position:absolute;
+    margin-top: 32px;;
+    margin-left: 830px;
+    margin-bottom: 700px;
+      }
+        li p {
+            position: relative;
+            text-align: left;
+            padding-bottom: 2px;
+          
+      } 
+
+      footer{
+        margin-top: 30%;
+    
+      }
+      section ol {
+          background-color: rgb(236, 236, 236);
+          padding: 5px 5px 3px 28px;
+          border-radius: 4px;
+          border : goldenrod dashed 2px;
+          font-weight: bold;
+          text-shadow: 2px 2px rgb(218, 169, 169);
+          box-shadow: 5px 10px rgb(143, 142, 142);
+      }
+      section h4{
+          background-color: rgb(222, 230, 211);
+          border: #333 solid;
+          padding: 6px 0px 6px 0px;
+          /* border-radius: 4px; */
+          border-top-left-radius: 80px 50px;
+          border-bottom-right-radius: 80px 50px;
+          box-shadow: 3px 5px #333;
+      }
+
+      
