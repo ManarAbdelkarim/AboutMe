@@ -39,7 +39,7 @@ for (let index = 0; index < 6; index++) {
 
 function Game(){
 
-    userName = prompt("what is your name?");
+     userName = prompt("what is your name?");
     // here is the lab 02 code
     for (let i = 0; i < questions.length; i++) {
        let userAnswer = prompt(questions[i]); 
@@ -139,6 +139,34 @@ function Game(){
             alert("you finished all the attempts .. did you open an umbrella indoor?");
          }
    
+    let places=['scotland','india', 'moroco','north pole', 'kenya', 
+    'boston-usa','spain','philippines','japan','russia'];
+     let answer = prompt('can you guess what country i would like to visit the most?'); 
+    attempt = 6;
+    let correct = true;
+     firstloop: while(attempt)
+     {
+          for(let j=0;j<places.length;j++)
+        { 
+            if(answer.toLowerCase()=== places[j]){
+         console.log('answer is '+answer);
+          alert('correct'); 
+           grade+=1;
+           correct = true;
+           break firstloop;
+            }
+            else { 
+                correct = false;
+            }
+        }
+            if(!correct){
+                answer =prompt('try again'); 
+                atp--;
+              alert(grade+ '/ 7');
+               alert('thank you '+userName );
+            }
+    
+}
 Result(Score) ;
 }
 function Result(num){
