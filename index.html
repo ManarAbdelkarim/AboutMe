@@ -4,60 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>About Me</title>
 </head>
 <body>
     <header>
+        <div id="header">
         <h1>Welcome to My Guessing Game</h1>
-        
-    </header>
-    <main>
 
-        <P id="introduce">
-            My name is Manar Abdelkarim ,I Made this game for level 201 lab 2 and 3
-        </p>
-        
-        <div id="Game" >
-
-           <h2>Here the game start</h2>
-           
             <strong id="warning">Please read the paragraph carefully and quickly, the game will start after 10 seconds (: ! </strong>
-            <br>
-            <div id="span">
-            <P>My name is Manar Abdelkarim ,I am 25 years old I born In Riyadh-Saudi Arabia  and currently live in Amman- jordan. </br>
-            II studied CIS at Princess Noura University and graduated in 2019. I like to watch anime, my favorite anime is
-             Attack on <br> Titans and the worst anime is One Peace. My favorite food is Shish Barak and the second favorite is Mansaf.
-            </p>
-        </div>
-            </div>
-               
 
-                <button id="start" onclick="Game()" disabled>Start</button>
-                <br>
-                <button id="moreTime" onclick="moreTime()">more time</button>
-                <br>
-                <section>
-                    <h4>TOP TEN Anime  </h4>
-                    <ol id="anything">
-                        <li><p>Attack on Titans</p></li>
-                        <li><p>The promised neverland</p></li>
-                        <li><p>Hunter X Hunter</p></li>
-                        <li><p>Naruto</p></li>
-                        <li><p>Demon Slayer</p></li>
-                        <li><p>The deadly seven sins</p></li>
-                        <li><p>The tower of god</p></li>
-                        <li><p>My hero academy</p></li>
-                        <li><p>Fullmetal Alchemist</p></li>
-                        <li><p>Fairy Tail</p></li>
-                    </ol>
-                </section>
-                <div id="place">
+            <div id="Game" >
+
+                 <div>
+                 <P id="span">My name is Manar Abdelkarim ,I am 25 years old I born In Riyadh-Saudi Arabia  and currently live in Amman- jordan. </br>
+                 II studied CIS at Princess Noura University and graduated in 2019. I like to watch anime, my favorite anime is
+                  Attack on <br> Titans and the worst anime is One Peace. My favorite food is Shish Barak and the second favorite is Mansaf.
+                 </p>
+             </div>
+                 </div>
+
+                 <div>
+                     <button id="start" onclick="play()" disabled><p>Start</p></button>
+                     <br>
+                     <button id="moreTime" onclick="needMoreTime()"><p>more time</p></button>
+                     <br>
+                 </div>
+                </div>
+                 <div id="place">
                     <p id="placeHolder"></p>
+                        </div>
 
-            
+    </header>
+    <main >
+                <div id="container">
+
+                    <h4>TOP TEN ANIME  </h4>
+                    <div id="anything">
+
+                        <ol>
+                            <div>
+                        <li ><p>1. Attack on Titans</p>
+                        <img src="./img/Attack-on-Titan-Season-4-poster-Eren-header.jpg" alt="Attack on Titans">
+                        </li>
+
+                       <li ><p>2. The promised neverland</p>
+                        <img src="./img/Yakusoku-no-Neverland-Wallpaper.jpg" alt="The promised neverland">
+                    </li>
+                   
+                      
+                   <li ><p>3. Hunter X Hunter</p>
+                    <img src="./img/HunterXHunter.jpg" alt="Hunter X Hunter">
+                </li>
+            </div>
+                   
+                   <div>
+                        <li><p>4. Naruto</p>
+                        <img src="./img/Naruto.jpg" alt="Naruto">
+                        </li>
+                   
+                   
+                        <li ><p>5. Demon Slayer</p>
+                        <img src="./img/demon_slayer_infinite_train_header2.jpg" alt="Demon Slayer">
+                        </li>
+                   
+                       
+                       <li rowspan="2"><p>6. The deadly seven sins</p>
+                    <img src="./img/TheDeadlySevenSins.jpg" alt="The deadly seven sins">
+                    </li>
+                      
+                </div>
+                <div>
+                        <li rowspan="2"><p>7. The tower of god</p>
+                        <img src="./img/tower-of-god-min.jpg" alt="The tower of god">
+                        </li>
+                   
+                   
+                        <li rowspan="2"><p>8. My hero academy</p>
+                        <img src="./img/My-hero-academy.jpg" alt="My hero academy">
+                        </li>
+                   
+                   
+                        <li rowspan="2"><p>9. Fairy Tail</p>
+                        <img src="./img/FairyTail.jpg" alt="Fairy Tail">
+                        </li>
+                    </div>
+                    </ol>
+            </div>
+                </div>
+
+
     </main>
-    <footer> &copy; 2021 Manar Abdelkarim</footer>
+    <div class="wrapper">
+    </div>
+    <footer class="footer">
+        <br><br><br><br><p>&copy; 2021 Manar Abdelkarim</p></footer>
     <script src="./js/app.js"></script>
 </div>
 </body>
